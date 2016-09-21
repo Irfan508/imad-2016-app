@@ -5,27 +5,69 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articles={
+    articleone:{
+        title:'Article one irfan',
+        heading:'Article-one',
+        date:'21 sept 2016',
+        content:  `<p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>
+                     <p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>
+                    <p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>`
+    },
+    articletwo:{
+              title:'Article two irfan',
+        heading:'Article-two',
+        date:'21 sept 2016',
+        content:  `<p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>
+                     <p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>
+                    <p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>`
+    },
+    articlethree:{
+        title:'Article three irfan',
+        heading:'Article-three',
+        date:'21 sept 2016',
+        content:  `<p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>
+                     <p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>
+                    <p>
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                     this is the content of my first page. this is the content of my first page.this is the content of my first page.
+                    this is the content of my first page. this is the content of my first page.this is the content of my first page.                
+                    </p>`
+    },
 
-var articleone={
-    title:'Article one irfan',
-    heading:'Article-one',
-    date:'21 sept 2016',
-    content:  `<p>
-                 this is the content of my first page. this is the content of my first page.this is the content of my first page.
-                 this is the content of my first page. this is the content of my first page.this is the content of my first page.
-                this is the content of my first page. this is the content of my first page.this is the content of my first page.                
-                </p>
-                 <p>
-                 this is the content of my first page. this is the content of my first page.this is the content of my first page.
-                 this is the content of my first page. this is the content of my first page.this is the content of my first page.
-                this is the content of my first page. this is the content of my first page.this is the content of my first page.                
-                </p>
-                <p>
-                 this is the content of my first page. this is the content of my first page.this is the content of my first page.
-                 this is the content of my first page. this is the content of my first page.this is the content of my first page.
-                this is the content of my first page. this is the content of my first page.this is the content of my first page.                
-                </p>`
-};
+}
 
 function createtemplate(data){
     var title=data.title;
@@ -65,6 +107,7 @@ function createtemplate(data){
     `;
     return htmltemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
