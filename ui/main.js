@@ -1,8 +1,8 @@
 console.log('Loaded!');
 
 //change the text in main.html
-var element=document.getElementById('main-text');
-element.innerHTML="Irfan is my name";
+//var element=document.getElementById('main-text');
+//element.innerHTML="Irfan is my name";
 
 //move the image in the main.html
 var img=document.getElementById("madi");
