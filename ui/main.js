@@ -6,7 +6,7 @@ element.innerHTML="Irfan is my name";
 
 //move the image in the main.html
 var img=document.getElementById("madi");
-function marginright(){
+function moveright(){
     var marginleft=0;
     marinleft=marginleft+10;
     img.style.marginleft=marginleft+'px';
